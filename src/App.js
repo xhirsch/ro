@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styled from 'styled-components';
 
 import { Canvas } from 'react-three-fiber';
-import { OrbitControls } from 'drei';
+import { OrbitControls, PositionalAudio } from 'drei';
 
 import Box from './components/Box';
 
@@ -15,11 +15,13 @@ const StyledApp = styled.div`
 function App() {
   return (
     <StyledApp>
-      <Canvas>
+      <Canvas camera={{ position: [0, 0, 10] }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <Box position={[1, 1, 1]} />
-        <OrbitControls />
+        <Suspense fallback={null}>
+          <Box />
+        </Suspense>
+        <OrbitControls enablePan={true} enableRotate={true} zoomSpeed={0.5} />
       </Canvas>
     </StyledApp>
   );
