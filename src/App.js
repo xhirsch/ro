@@ -1,17 +1,27 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
+
 import { Canvas } from 'react-three-fiber';
-import Box from './components/Box';
 import { OrbitControls } from 'drei';
+
+import Box from './components/Box';
+
+const StyledApp = styled.div`
+  background: cornflowerblue;
+  width: 100vw;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[1, 1, 1]} />
-      <OrbitControls />
-    </Canvas>
+    <StyledApp>
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[1, 1, 1]} />
+        <OrbitControls />
+      </Canvas>
+    </StyledApp>
   );
 }
 
