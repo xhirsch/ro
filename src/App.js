@@ -1,14 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Canvas } from 'react-three-fiber';
+import Box from './components/Box';
+import { OrbitControls } from 'drei';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <h1>Random Orchestra</h1>
-      </div>
-    </div>
+    <Canvas>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Box position={[1, 1, 1]} />
+      <OrbitControls />
+    </Canvas>
   );
 }
 
