@@ -1,13 +1,19 @@
 import React, { Suspense } from 'react';
 import styled from 'styled-components';
 
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import { Canvas } from 'react-three-fiber';
 import { OrbitControls, PositionalAudio } from 'drei';
 
-import Box from './components/Box';
+import AUDIO from './components/AUDIO';
+import Bio from './components/Bio';
+import Home from './components/Home';
+import Nav from './components/Nav';
 
 const StyledApp = styled.div`
   background: cornflowerblue;
+  margin: 0;
   width: 100vw;
   height: 100vh;
 `;
@@ -15,14 +21,17 @@ const StyledApp = styled.div`
 function App() {
   return (
     <StyledApp>
-      <Canvas camera={{ position: [0, 0, 10] }}>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Suspense fallback={null}>
-          <Box />
-        </Suspense>
-        <OrbitControls enablePan={true} enableRotate={true} zoomSpeed={0.5} />
-      </Canvas>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route path="/bio">
+            <Bio />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </StyledApp>
   );
 }
