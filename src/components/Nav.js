@@ -6,6 +6,21 @@ const StyledNav = styled.nav`
   background: orange;
   display: flex;
   flex-direction: column;
+
+  & ul {
+    list-style-type: none;
+
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+  }
+
+  & li {
+    background: grey;
+  }
 `;
 
 const Nav = () => {
