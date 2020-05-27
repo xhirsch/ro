@@ -1,17 +1,46 @@
-html,
-body,
-#root {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+@import-normalize;
+@font-face {
+  font-family: 'Amplitude-light';
+  src: url('./assets/fonts/amplitude-light-webfont.eot');
+  src: url('./assets/fonts/amplitude-light-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/amplitude-light-webfont.woff') format('woff'),
+    url('./assets/fonts/amplitude-light-webfont.ttf') format('truetype');
+  font-display: block;
+}
+@font-face {
+  font-family: 'Amplitude-Regular';
+  src: url('./assets/fonts/amplitude-regular-webfont.eot');
+  src: url('./assets/fonts/amplitude-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/amplitude-regular-webfont.woff') format('woff'),
+    url('./assets/fonts/amplitude-regular-webfont.ttf') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Amplitude-Medium';
+  src: url('./assets/fonts/amplitude-medium-webfont.eot');
+  src: url('./assets/fonts/amplitude-medium-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/amplitude-medium-webfont.woff') format('woff'),
+    url('./assets/fonts/amplitude-medium-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amplitude-Bold';
+  src: url('./assets/fonts/amplitude-bold-webfont.eot');
+  src: url('./assets/fonts/amplitude-bold-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/amplitude-bold-webfont.woff') format('woff'),
+    url('./assets/fonts/amplitude-bold-webfont.ttf') format('truetype');
+  font-display: block;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: Amplitude-Regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

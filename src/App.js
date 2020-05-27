@@ -12,7 +12,7 @@ import Home from './components/Home';
 import Nav from './components/Nav';
 
 const StyledApp = styled.div`
-  background: cornflowerblue;
+  background: #5b33ff;
   margin: 0;
   width: 100vw;
   height: 100vh;

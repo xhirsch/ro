@@ -3,40 +3,34 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  background: orange;
+  position: absolute;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
 
-  & ul {
-    list-style-type: none;
+  & a {
+    font-family: Amplitude-Bold;
+    padding: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #daff33;
+    transition: all 0.5s ease-in-out 0s;
 
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-  }
-
-  & li {
-    background: grey;
+    &:hover {
+      background: #ff5833;
+    }
   }
 `;
 
 const Nav = () => {
   return (
     <StyledNav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/bio">Bio</Link>
-        </li>
-        <li>
-          <a href="https://soundcloud.com/random-orchestra/">Soundcloud</a>
-        </li>
-      </ul>
+      {/* <Link to="/">Home</Link>
+      <Link to="/bio">Bio</Link> */}
+      <a href="https://soundcloud.com/random-orchestra/" target="_blank">
+        Soundcloud
+      </a>
     </StyledNav>
   );
 };
