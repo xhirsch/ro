@@ -5,6 +5,7 @@ const Wrapper = styled.div`
 width: 100%;
 height: 100%;
   display: grid;
+  grid-column: 1/3;
   grid-template-rows; auto auto;
 `;
 
@@ -16,7 +17,6 @@ const TextWrapper = styled.div`
 `;
 
 const ContentENG = styled.div`
-  max-width: 30%;
   font-family: Amplitude-Medium;
   background: PALEGREEN;
   color: #ff5733;
@@ -24,7 +24,6 @@ const ContentENG = styled.div`
 `;
 
 const ContentDE = styled.div`
-  max-width: 30%;
   background: #dbff33;
   color: #8333ff;
   padding: 2rem;

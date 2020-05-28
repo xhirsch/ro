@@ -3,16 +3,17 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  position: absolute;
   width: 100%;
+  height: 100%;
+  background: yellow;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 
   & a {
     font-family: Amplitude-Bold;
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 3rem;
     text-decoration: none;
     color: #daff33;
     transition: all 0.5s ease-in-out 0s;
