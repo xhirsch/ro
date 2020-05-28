@@ -2,37 +2,55 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StyledNav = styled.nav`
+const Wrapper = styled.div`
+  grid-area: n;
   width: 100%;
   height: 100%;
-  background: yellow;
+  background: pink;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
 
-  & a {
-    font-family: Amplitude-Bold;
-    padding: 1rem;
-    font-size: 3rem;
-    text-decoration: none;
-    color: #daff33;
-    transition: all 0.5s ease-in-out 0s;
+const ImgLink = styled.button`
+  height: 100%;
+  width: 100%;
+  background: #0ead3c;
+  border: none;
+  font-family: Amplitude-Bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #daff33;
+  transition: all 0.5s ease-in-out 0s;
 
-    &:hover {
-      background: #ff5833;
-    }
+  &:hover {
+    background: #ff5833;
+  }
+`;
+
+const BioLink = styled.button`
+  height: 100%;
+  width: 100%;
+  background: #ff6400;
+  border: none;
+  font-family: Amplitude-Bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: white;
+  transition: all 0.5s ease-in-out 0s;
+
+  &:hover {
+    background: #ff5833;
   }
 `;
 
 const Nav = () => {
   return (
-    <StyledNav>
-      {/* <Link to="/">Home</Link>
-      <Link to="/bio">Bio</Link> */}
-      <a href="https://soundcloud.com/random-orchestra/" target="_blank">
-        Soundcloud
-      </a>
-    </StyledNav>
+    <Wrapper>
+      <ImgLink>IMAGES</ImgLink>
+      <BioLink>BIOGRAPHIE</BioLink>
+    </Wrapper>
   );
 };
 

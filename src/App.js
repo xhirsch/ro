@@ -9,25 +9,28 @@ import { OrbitControls, PositionalAudio } from 'drei';
 import AUDIO from './components/AUDIO';
 import Bio from './components/Bio';
 import Home from './components/Home';
-// import Nav from './components/Nav';
+import Nav from './components/Nav';
 
 const StyledApp = styled.div`
-  background: #5b33ff;
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    't t t t t t t t t t n n'
+    't t t t t t t t t t n n'
+    't t t t t t t t t t s s';
 `;
 
 const Soundcloud = styled.button`
+  grid-area: s;
   width: 100%;
-  height: 100%;
-  grid-colum: 1 / -1;
   background: #8d33ff;
+  border: none;
   font-family: Amplitude-Bold;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #daff33;
   transition: all 0.5s ease-in-out 0s;
 
@@ -36,24 +39,9 @@ const Soundcloud = styled.button`
   }
 `;
 
-const Nav = styled.div`
-  grid-column: 2 / -1;
-`;
-
 function App() {
   return (
     <StyledApp>
-      {/* <Router>
-        <Switch>
-          <Route path="/bio">
-            <Bio />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Nav />
-      </Router> */}
       <Bio />
       <Nav />
       <Soundcloud>
