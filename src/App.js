@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Bio from './components/Bio';
 import Images from './components/Images';
@@ -16,8 +16,6 @@ const StyledApp = styled.div`
     flex-direction: column-reverse;
   }
 `;
-
-const StyledNav = styled.div``;
 
 function App() {
   return (

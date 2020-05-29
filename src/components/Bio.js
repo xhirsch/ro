@@ -1,12 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import randomColor from 'randomcolor';
+import { toRGB } from '../helpers/rgbExtract'
 
-const bg1 = randomColor();
-const bg2 = randomColor();
+const color = randomColor({
+  count: 2,
+  format: "rgb"
+});
+
+const rColor = randomColor({ format: "rgb" });
+const bgColor = toRGB(rColor)
+
+const tColorR = 255 - `${bgColor[0]}`;
+const tColorG = 255 - `${bgColor[1]}`;
+const tColorB = 255 - `${bgColor[2]}`;
+
+const tColor = `rgb(${tColorR}, ${tColorG}, ${tColorB})`
+
+const tColor1 = randomColor({
+  format: "rgb"
+});
+const tColor2 = randomColor();
 
 const Text = styled.div`
-  background: violet;
+  background: ${rColor};
   position: relative;
   width: 100%;
   height: 100%;
@@ -30,8 +47,8 @@ const Text = styled.div`
 
 const ContentENG = styled.div`
   height: calc(100% - 8rem);
-  background: ${bg1};
-  color: #ff5733;
+  // background: ${bgColor};
+  color: ${tColor};
   padding: 4rem;
 
   @media screen and (max-width: 500px) {
@@ -41,9 +58,9 @@ const ContentENG = styled.div`
 
 const ContentDE = styled.div`
   height: calc(100% - 8rem);
-  background: ${bg2};
+  // background: ${bgColor};
   padding: 4rem;
-  color: #8333ff;
+  color: ${tColor};
 
   @media screen and (max-width: 500px) {
     padding: 1rem;
