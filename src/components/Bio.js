@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import randomColor from 'randomcolor';
+
+const bg1 = randomColor();
+const bg2 = randomColor();
 
 const Text = styled.div`
-  grid-area: t;
   background: violet;
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -11,21 +15,39 @@ const Text = styled.div`
   justify-content: center;
   align-items: stretch;
   font-size: 2em;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 1.4rem;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const ContentENG = styled.div`
-  height: 100%;
-  font-family: Amplitude-Medium;
-  background: PALEGREEN;
+  height: calc(100% - 8rem);
+  background: ${bg1};
   color: #ff5733;
   padding: 4rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+  }
 `;
 
 const ContentDE = styled.div`
-  height: 100%;
-  background: #dbff33;
-  color: #8333ff;
+  height: calc(100% - 8rem);
+  background: ${bg2};
   padding: 4rem;
+  color: #8333ff;
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+  }
 `;
 
 const Bio = () => {

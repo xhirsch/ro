@@ -1,43 +1,42 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React from "react";
 import styled from 'styled-components';
+import randomColor from 'randomcolor';
+
+import Button from './Button'
+
+const bg1 = randomColor();
+const bg2 = randomColor();
+const bg3 = randomColor();
+
+const tColor1 = randomColor();
+const tColor2 = randomColor();
+const tColor3 = randomColor();
 
 const Wrapper = styled.div`
-  grid-area: n;
-  width: 100%;
+  width: 25%;
   height: 100%;
-  background: pink;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
 
-const ImgLink = styled.button`
-  height: 100%;
-  width: 100%;
-  background: #0ead3c;
-  border: none;
-  font-family: Amplitude-Bold;
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: #daff33;
-  transition: all 0.5s ease-in-out 0s;
-
-  &:hover {
-    background: #ff5833;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    height: 25%;
   }
 `;
 
-const BioLink = styled.button`
-  height: 100%;
+const Soundcloud = styled.button`
   width: 100%;
-  background: #ff6400;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${bg3};
   border: none;
+  cursor:pointer;
   font-family: Amplitude-Bold;
   text-transform: uppercase;
   font-size: 2rem;
-  color: white;
+  color: ${tColor3};
   transition: all 0.5s ease-in-out 0s;
 
   &:hover {
@@ -48,8 +47,14 @@ const BioLink = styled.button`
 const Nav = () => {
   return (
     <Wrapper>
-      <ImgLink>IMAGES</ImgLink>
-      <BioLink>BIOGRAPHIE</BioLink>
+      <Button name={"Biography"} link={"/bio"} bgColor={bg1} tColor={tColor1} />
+      <Button name={"Images"} link={"/images"} bgColor={bg2} tColor={tColor2} />
+      <Soundcloud onClick={() => {
+        window.open(
+          'https://soundcloud.com/random-orchestra',
+          '_blank'
+        );
+      }}>Soundcloud</Soundcloud>
     </Wrapper>
   );
 };
