@@ -24,8 +24,8 @@ function App() {
     <StyledApp>
       <Router>
         <Switch>
-          <Route path="/images" component={Images} />
-          <Route path="/" component={Bio} />
+          <Route exact path="/images" component={Images} />
+          <Route exact path="/" component={Bio} />
         </Switch>
         <Nav />
       </Router>
