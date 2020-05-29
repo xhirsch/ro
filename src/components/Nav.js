@@ -47,7 +47,7 @@ const Soundcloud = styled.button`
 const Nav = () => {
   return (
     <Wrapper>
-      <Button name={"Biography"} link={"/bio"} bgColor={bg1} tColor={tColor1} />
+      <Button name={"Biography"} link={"/"} bgColor={bg1} tColor={tColor1} />
       <Button name={"Images"} link={"/images"} bgColor={bg2} tColor={tColor2} />
       <Soundcloud onClick={() => {
         window.open(
