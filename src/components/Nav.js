@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { toRGB } from '../helpers/rgbExtract'
 import randomColor from 'randomcolor';
 
 import Button from './Button'
@@ -13,7 +14,7 @@ const tColor2 = randomColor();
 const tColor3 = randomColor();
 
 const Wrapper = styled.div`
-  width: 25%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -38,17 +39,26 @@ const Soundcloud = styled.button`
   font-size: 2rem;
   color: ${tColor3};
   transition: all 0.5s ease-in-out 0s;
-
-  &:hover {
-    background: #ff5833;
-  }
 `;
 
-const Nav = () => {
+const Nav = (props) => {
+  const hue = toRGB(props.color)
+
+  const hueBG = (hue[0] + 180) % 360;
+  const sBG = "100%";
+  const lBG = "50%";
+  const bgColor = `hsl(${hueBG}, ${sBG}, ${lBG})`;
+
+  const hueT = `${hue[0]}`;
+  const sT = "50%";
+  const lT = "50%";
+
+  const textColor = `hsl(${hueT}, ${sT}, ${lT})`
+
   return (
     <Wrapper>
-      <Button name={"Biography"} link={"/"} bgColor={bg1} tColor={tColor1} />
-      <Button name={"Images"} link={"/images"} bgColor={bg2} tColor={tColor2} />
+      <Button name={"Biography"} link={"/"} bgColor={bgColor} tColor={textColor} />
+      <Button name={"Images"} link={"/images"} bgColor={bgColor} tColor={textColor} />
       <Soundcloud onClick={() => {
         window.open(
           'https://soundcloud.com/random-orchestra',

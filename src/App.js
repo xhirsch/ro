@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import randomColor from 'randomcolor';
 
 import Bio from './components/Bio';
 import Images from './components/Images';
 import Nav from './components/Nav';
+
+const rColor = randomColor({ format: "hsl" });
 
 const StyledApp = styled.div`
   width: 100vw;
@@ -18,14 +21,15 @@ const StyledApp = styled.div`
 `;
 
 function App() {
+  const [color, setColor] = useState(rColor)
   return (
     <StyledApp>
       <Router>
         <Switch>
           <Route exact path="/images" component={Images} />
-          <Route exact path="/" component={Bio} />
+          <Route exact path="/"><Bio color={color} /></Route>
         </Switch>
-        <Nav />
+        <Nav color={color} />
       </Router>
     </StyledApp>
   );

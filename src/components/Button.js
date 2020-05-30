@@ -15,25 +15,19 @@ const StyledButton = styled.button`
   align-items: center;
   border: none;
   cursor:pointer;
-  background: ${bg1};
   font-family: Amplitude-Bold;
-  text-transform: uppercase;
   font-size: 2rem;
-  color: #daff33;
   transition: all 0.5s ease-in-out 0s;
-  
-  &:hover {
-    background: #ff5833;
-  }
 `;
 
 const Button = (props) => {
 
+  console.log(props.bgColor)
   function changeBackgroundEnter(e) {
-    e.target.style.background = `${bg2}`;
+    e.target.style.background = "black";
   }
   function changeBackgroundLeave(e) {
-    e.target.style.background = `${bg3}`;
+    e.target.style.background = "white";
   }
 
 
