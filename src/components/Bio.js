@@ -29,15 +29,14 @@ const Bio = (props) => {
   return (
     <Wrapper>
       <Content>
-        Random Orchestra ist die Vision von Media Artist Xaver Hirsch und
-        Musikproduzent Oliver Gehrmann, die atmosphärische elektronische Musik
-        und komplexe Visualisierungen zusammenführt. Organische Texturen,
-        melancholische Melodien, verträumte Sphären und Pop-Anleihen, vermischen
-        sich visuell und auditiv zu einem cineastischen Erlebnis. <br />
+        Random Orchestra is the vision of media artist Xaver Hirsch and music producer Oliver Gehrmann,
+        that unites atmospherical electronic music with sophisticated visualization.
+        They blend organic textures with melancholic melodies, dreamy pads with distorted percussions
+        and dark pop layers to create a cinematic utopia, both visual and auditory.
+ <br />
         <br />
-        Beeinflusst von Künstlern wie Shlohmo, Bonobo, Moderat und Mount Kimbie
-        suchen sie nach ihrer eigenen Heimat im Zwielicht von abstraktem
-        Hip-Hop, Ambient, elektronischer Musik und visueller Freiheit.
+        Influenced by artists like Shlohmo, Bonobo, Moderat and Mount Kimbie they search for their own place
+        within the genre-bending twilight of abstract hip-hop, ambient, electronic music and organic visual weirdness.
       </Content>
     </Wrapper>
   );

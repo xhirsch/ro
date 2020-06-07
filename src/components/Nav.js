@@ -6,6 +6,8 @@ const Wrapper = styled.div`
   width: 100%;
   height: 5%;
   position: fixed;
+  bottom:0;
+  left: 0;
   display: flex;
   flex-direction: rows;
   font-size: 1.4rem;
