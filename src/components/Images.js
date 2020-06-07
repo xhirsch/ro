@@ -25,6 +25,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Img = styled.img`
+  height: 100%;
   width: 30%; 
   
   @media screen and (max-width: 500px) {
