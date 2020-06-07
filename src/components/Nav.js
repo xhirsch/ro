@@ -8,7 +8,10 @@ const Wrapper = styled.div`
   position: fixed;
   bottom:0;
   left: 0;
-  display: flex;
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
   flex-direction: rows;
   font-size: 1.4rem;
 
@@ -28,7 +31,10 @@ const SoundCloudButton = styled.div`
   height: 100%;
   background: black;
   color: white;
-  display: flex;
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
   justify-content: center;
   align-items: center;
   border: none;
