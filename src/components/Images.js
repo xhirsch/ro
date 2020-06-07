@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import randomColor from 'randomcolor';
 
 import img1 from '../assets/images/ro_0001.jpg'
 import img2 from '../assets/images/ro_0002.jpg'
 
-const bg = randomColor();
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  background: ${bg};
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ContentWrapper = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: rows;
-  align-items: center;
   justify-content: center;
 `;
 
 const Img = styled.img`
-width: 35%;
-padding: 4rem;
+  width: 30%; 
+  
+  @media screen and (max-width: 500px) {
+    width: 49%;
+  }
 `;
 
 
